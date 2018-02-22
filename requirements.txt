@@ -1,0 +1,3 @@
+couchbase>=2.2.0
+robotframework>=3.0.1
+robotframework-jsonvalidator>=1.0.0
