@@ -1,7 +1,7 @@
 before_install:
 # LibCouchbase
   - sudo wget -O/etc/apt/sources.list.d/couchbase.list http://packages.couchbase.com/ubuntu/couchbase-ubuntu1204.list
-  - "sudo wget http://packages.couchbase.com/ubuntu/couchbase.key && sudo cat couchbase.key | sudo apt-key add -"
+  - sudo wget http://packages.couchbase.com/ubuntu/couchbase.key && sudo cat couchbase.key | sudo apt-key add -
   - sudo apt-get update
   - sudo apt-get install libcouchbase2 libcouchbase-dev
 
