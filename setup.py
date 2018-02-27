@@ -35,7 +35,7 @@ setup(
         'Framework :: Robot Framework :: Library',
     ],
     keywords='testing robotframework couchbase',
-    package_dir={'robotframework-couchbaselibrary': 'src'},
+    package_dir={'': 'src'},
     py_modules=['CouchbaseLibrary'],
     install_requires=requirements,
 )
