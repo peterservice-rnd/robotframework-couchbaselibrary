@@ -27,16 +27,20 @@ Example
 
     *** Settings ***
     Library           CouchbaseLibrary
+    Test Setup        Connect To Couchbase
+    Test Teardown     Close All Couchbase Bucket Connections
 
     *** Test Cases ***
     View Document In Bucket
-        Connect To Couchbase Bucket    my_host_name    8091    bucket_name    password    alias=bucket1
-        Connect To Couchbase Bucket    my_host_name    8091    bucket_name    password    alias=bucket2
         Switch Couchbase Bucket Connection    bucket1
         View Document By Key    key=1C1#000
         Switch Couchbase Connection     bucket2
         View Document By Key    key=1C1#000
-        Close All Couchbase Bucket Connections
+
+    *** Keywords ***
+    Connect To Couchbase
+        Connect To Couchbase Bucket    my_host_name    8091    bucket_name    password    alias=bucket1
+        Connect To Couchbase Bucket    my_host_name    8091    bucket_name    password    alias=bucket2
 
 License
 -------
