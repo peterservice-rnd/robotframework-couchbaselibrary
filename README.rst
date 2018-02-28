@@ -33,7 +33,7 @@ See keyword documentation for CouchbaseLibrary library on `GitHub`_.
 Example
 -------
 
-.. code:: robot
+.. code:: robotframework
 
     *** Settings ***
     Library           CouchbaseLibrary
