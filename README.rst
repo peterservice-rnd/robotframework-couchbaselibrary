@@ -11,6 +11,16 @@ Short Description
 Installation
 ------------
 
+Before installing robotframework-couchbaselibrary, you should have the following to be installed:
+
+- Couchbase Server (http://couchbase.com/download)
+- libcouchbase_. version 2.8.0 or greater (Bundled in Windows installer)
+- libcouchbase development files.
+- Python development files
+- A C compiler.
+
+To install the library from PyPI, use this command:
+
 ::
 
     pip install robotframework-couchbaselibrary
@@ -48,6 +58,7 @@ License
 Apache License 2.0
 
 .. _Robot Framework: http://www.robotframework.org
+.. _libcouchbase: http://developer.couchbase.com/documentation/server/4.5/sdk/c/start-using-sdk.html
 .. _GitHub: https://github.com/peterservice-rnd/robotframework-cassandracqllibrary/tree/master/docs
 
 .. |Build Status| image:: https://travis-ci.org/peterservice-rnd/robotframework-couchbaselibrary.svg?branch=master
