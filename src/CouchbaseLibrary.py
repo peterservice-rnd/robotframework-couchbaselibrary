@@ -27,7 +27,7 @@ class CouchbaseLibrary(object):
         self._bucket = None
         self._cache = ConnectionCache()
 
-    def connect_to_couchbase_bucket(self, host, port, bucket_name, password=None, alias=None):
+    def connect_to_couchbase_bucket(self, host, port, bucket_name, password=None, alias=None, ipv6="disabled"):
         """
         Connect to a Couchbase bucket.
 
@@ -37,13 +37,15 @@ class CouchbaseLibrary(object):
         _bucket_name_ - couchbase bucket name;\n
         _password_ - password;\n
         _alias_ - connection alias;\n
+        _ipv6_ - parameter to allow ipv6 connection. Possible values: "disabled", "allow", "only";\n
 
         *Example:*\n
         | Connect To Couchbase Bucket | my_host_name | 8091 | bucket_name | password | alias=bucket |
         """
         logger.debug('Connecting using : host=%s, port=%s, bucketName=%s, password=%s ' % (host, port, bucket_name,
                                                                                            password))
-        connection_string = '{host}:{port}/{bucket}'.format(host=host, port=port, bucket=bucket_name)
+        connection_string = '{host}:{port}/{bucket}?ipv6={ipv6}'.format(
+            host=host, port=port, bucket=bucket_name, ipv6=ipv6)
         try:
             bucket = Bucket(connection_string, password=password)
             self._bucket = bucket
