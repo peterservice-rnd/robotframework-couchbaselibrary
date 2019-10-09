@@ -16,7 +16,7 @@ with open(path.join(here, 'requirements.txt')) as f:
 
 setup(
     name='robotframework-couchbaselibrary',
-    version='2.0.0',
+    version='2.0.1',
     description='A Robot Framework library to work with Couchbase',
     long_description=long_description,
     url='https://github.com/peterservice-rnd/robotframework-couchbaselibrary',
